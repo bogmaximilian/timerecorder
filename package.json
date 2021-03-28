@@ -10,14 +10,33 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:timerecorder.helloWorld"
+		"onCommand:timerecorder.startrecording",
+		"onCommand:timerecorder.stoprecording"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": {
+			"title": "TimeRecorder",
+			"properties": {
+				"timerecorder.defaultlogpath": {
+					"type": "string",
+					"default": "",
+					"description": "Path to the location of log files the extension will generate"
+				}
+			}
+		},
 		"commands": [
 			{
-				"command": "timerecorder.helloWorld",
-				"title": "Hello World"
+				"command": "timerecorder.startrecording",
+				"title": "TimeRecorder: Start Recording"
+			},
+			{
+				"command": "timerecorder.stoprecording",
+				"title": "TimeRecorder: Stop Recording"
+			},
+			{
+				"command": "timerecorder.setdefaultlogpath",
+				"title": "TimeRecorder: Set Default Log Path"
 			}
 		]
 	},
