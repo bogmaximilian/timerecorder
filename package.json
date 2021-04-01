@@ -11,7 +11,8 @@
 	],
 	"activationEvents": [
 		"onCommand:timerecorder.startrecording",
-		"onCommand:timerecorder.stoprecording"
+		"onCommand:timerecorder.stoprecording",
+		"onCommand:timerecorder.setdefaultlogpath"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
